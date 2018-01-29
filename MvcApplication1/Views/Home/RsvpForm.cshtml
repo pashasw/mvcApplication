@@ -1,0 +1,34 @@
+﻿@model MvcApplication1.Models.MessageFromClient
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title>RsvpForm</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css" />
+
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <h1>
+            <p>Введите слово, составленное из букв русского алфавита:</p>
+            <p> <input id="Message" name="Message" type="text" autocomplete="off" /> </p>
+        </h1>
+        <h1>
+            <input type="submit" value="Отправить" />
+
+        </h1>
+        
+    }
+</body>
+</html >
+

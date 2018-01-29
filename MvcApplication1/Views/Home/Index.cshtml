@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Greeting (из представления)
+    </div>
+    <p> Cipher: <table style="width:50%;"><tr><td>а</td><td>н</td></tr>
+                                          <tr><td>б</td><td>к</td></tr>
+                                          <tr><td>в</td><td>ы</td></tr>
+       </table> </p>
+    @Html.ActionLink("Форма RSVP", "RsvpForm")
+</body>
+</html>

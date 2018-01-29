@@ -1,0 +1,30 @@
+﻿.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.btn:hover {
+    background-color: ButtonFace;
+    background-position: center;
+
+    background-image:url([url]http://cyberforum.ru/images/buttons/report.png[/url])
+}
+bnt:active {
+    background-image:url([url]http://cyberforum.ru/images/statusicon/user_offline.png[url])
+}

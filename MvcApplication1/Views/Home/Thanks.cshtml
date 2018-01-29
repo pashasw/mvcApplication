@@ -1,0 +1,42 @@
+﻿@model MvcApplication1.Models.MessageFromClient
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css" />
+    <title>Thanks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+</head>
+<body ng-app>
+    <div>
+        <h1><p> Сообщение:     @Model.Message</p>
+        <p> Шифр:        @ViewBag.Greeting</p>
+            <label><input type="button"  ng-click="showtable = !showtable" value="История" /></label>
+        </h1>
+        <div ng-show="showtable">
+            <table id="r1">
+                @for (int i = 0; i < @ViewBag.AllCipher.Count; i++)
+                {
+                    <tr>
+                        <td>@ViewBag.AllCipher[i]</td>
+                        <td> @ViewBag.AllTime[i]</td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <h1>
+        <input type="button" onclick="history.back();" value="Назад" />
+    </h1>
+    </div>
+</body>
+</html>
